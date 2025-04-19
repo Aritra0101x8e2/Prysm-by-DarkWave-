@@ -1,0 +1,97 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 50% 6%;
+    --foreground: 210 20% 98%;
+
+    --card: 210 40% 10%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 210 45% 8%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 196 100% 50%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 210 40% 20%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 210 40% 15%;
+    --muted-foreground: 210 20% 80%;
+
+    --accent: 196 100% 40%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 210 40% 20%;
+    --input: 210 40% 20%;
+    --ring: 196 100% 40%;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-cyber-dark text-foreground antialiased;
+    background-image: radial-gradient(circle at 50% 50%, rgba(16, 40, 65, 0.8) 0%, rgba(10, 25, 41, 1) 100%);
+    min-height: 100vh;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(10, 25, 41, 0.5);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 163, 255, 0.5);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 163, 255, 0.8);
+  }
+}
+
+@layer components {
+  .cyber-panel {
+    @apply bg-cyber-panel border border-cyber-accent/20 backdrop-blur-sm rounded-lg shadow-lg;
+  }
+  
+  .cyber-panel-dark {
+    @apply bg-cyber-darker border border-cyber-accent/20 backdrop-blur-sm rounded-lg shadow-lg;
+  }
+
+  .glass-morphism {
+    @apply bg-cyber-glass border border-cyber-accent/20 backdrop-blur-md rounded-lg;
+  }
+
+  .cyber-text-glow {
+    text-shadow: 0 0 10px rgba(0, 163, 255, 0.5);
+  }
+
+  .cyber-grid-bg {
+    @apply bg-cyber-grid bg-cyber-grid-size;
+    background-position: center;
+  }
+  
+  .radar-container {
+    background: radial-gradient(circle, rgba(0, 163, 255, 0.1) 0%, rgba(10, 25, 41, 0.4) 100%);
+  }
+
+  .radar-beam {
+    @apply h-1/2 w-1 bg-gradient-to-t from-cyber-accent to-transparent absolute bottom-0 left-1/2 -translate-x-1/2 origin-bottom animate-radar-beam;
+  }
+}
