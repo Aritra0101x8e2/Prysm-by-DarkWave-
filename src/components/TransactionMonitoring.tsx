@@ -202,14 +202,13 @@ const TransactionMonitoring = () => {
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-bold text-white">Real-Time Transaction Monitor</h2>
           <Button
-            onClick={handleStartScan}
-            disabled={isScanning}
-            variant="ghost"
-            className="text-cyber-accent border border-cyber-accent/50 hover:bg-cyber-accent/10"
-          >
-            <Search className="mr-2 h-4 w-4" />
-            {isScanning ? 'Scanning...' : 'Scan Network'}
-          </Button>
+  onClick={() => window.open('https://safer-india-darkwave-aritra.vercel.app/', '_blank')}
+  variant="default"
+  className="bg-purple-700 text-white hover:bg-purple-800"
+>
+  <Search className="mr-2 h-4 w-4" />
+  Live Location
+</Button>
         </div>
 
         <div className="space-y-3 overflow-y-auto max-h-[75vh] pr-2">
