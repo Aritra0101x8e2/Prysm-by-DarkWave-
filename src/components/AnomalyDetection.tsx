@@ -137,7 +137,7 @@ const AnomalyDetection = () => {
         time: "Just now"
       };
 
-      setAnomalies(prev => [newAnomaly, ...prev].slice(0, 50)); // keep only latest 5
+      setAnomalies(prev => [newAnomaly, ...prev].slice(0, 100)); 
     }, 1000);
 
     return () => clearInterval(interval);
