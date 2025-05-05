@@ -5,7 +5,6 @@ import { Progress } from '@/components/ui/progress';
 import { ShieldCheck, ShieldAlert, Network, Lock, Database } from 'lucide-react';
 
 const SecurityStatus = () => {
-  // Mock security scores
   const securityScore = 87;
   const systemStatus = [
     { name: "Fraud Detection", status: "active", uptime: "99.9%" },
